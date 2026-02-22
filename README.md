@@ -62,17 +62,10 @@ Creates a new payment.
   "description": "Annual Fees"
 }
 
----  
-
-**Response**
-```json
+Response: 
 {
   "id": "generated-id",
   "status": "SUCCESS",
   "amount": 120,
   "currency": "GBP"
 }
-
----
-
-sasa
