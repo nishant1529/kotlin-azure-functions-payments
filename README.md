@@ -9,7 +9,7 @@ This project demonstrates how to build serverless HTTP APIs using the Azure Func
 
 - Serverless backend using **Azure Functions**
 - Written entirely in **Kotlin**
-- Built with **Gradle 8.14.4**  (Since Azure Function is not supporting Gradle 9.X so Gradle 8.X is being used, Azure function uses maven by default as I found from copilot & chatGPT, please cross check while working)
+- Built with **Gradle 8.14.4**  (Since Azure Function is not supporting Gradle 9.X so Gradle 8.X is being used, Azure function uses maven by default as I found from copilot & chatGPT, please cross check while taking decision)
 - JSON serialization using **Jackson Kotlin module**
 - Two fully working endpoints:
   - `POST /payments` — Create a payment
