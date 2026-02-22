@@ -72,3 +72,7 @@ Creates a new payment.
   "currency": "GBP"
 }
 ```
+---
+
+## Frontend App
+<a href="https://github.com/nishant1529/payment_app"> Frontend App (payment_app) </a>
