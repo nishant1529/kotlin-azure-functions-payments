@@ -1,0 +1,56 @@
+plugins {
+    id "java"
+    id "com.microsoft.azure.azurefunctions" version "1.11.0"
+    id "org.jetbrains.kotlin.jvm" version "1.9.22"
+}
+
+group 'com.learn.payment'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'com.microsoft.azure.functions:azure-functions-java-library:2.0.1'
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.17.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.17.0"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+}
+
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            setSrcDirs(["src/main/kotlin"])
+        }
+    }
+}
+
+azurefunctions {
+    resourceGroup = 'java-functions-group'
+    appName = 'payment_backend_azure-1771769694799'
+    pricingTier = 'Consumption'
+    region = 'westuk'
+    runtime {
+        os = 'windows'
+        javaVersion = '17'
+    }
+    localDebug = "transport=dt_socket,server=y,suspend=n,address=5005"
+}
+  

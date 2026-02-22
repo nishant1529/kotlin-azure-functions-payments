@@ -1,0 +1,45 @@
+# Java / Kotlin
+*.class
+*.log
+*.jar
+*.war
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Gradle
+.gradle/
+build/
+
+# Azure Functions build output
+bin/
+obj/
+build/azure-functions/
+
+# Azure local settings (contains secrets)
+local.settings.json
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.checkstyle
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# gradle-wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Azurite (local storage emulator)
+__blobstorage__
+__queuestorage__
+__azurite_db*__.json
