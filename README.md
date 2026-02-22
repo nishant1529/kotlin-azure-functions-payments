@@ -61,11 +61,14 @@ Creates a new payment.
   "currency": "GBP",
   "description": "Annual Fees"
 }
+```
 
-Response: 
+**Response**
+```json
 {
   "id": "generated-id",
   "status": "SUCCESS",
   "amount": 120,
   "currency": "GBP"
 }
+```
